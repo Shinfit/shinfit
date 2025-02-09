@@ -2,20 +2,8 @@
 
 body {
     background-color: #ffffff;
-    border: 1px dotted gray;
     font-family: 'Poppins', Arial, Helvetica, Arial,  sans-serif;
 	font-size: small;
-}
-
-#logo {
-    border: none;
-    margin: 10px auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 .center {
@@ -34,6 +22,7 @@ body {
 
 h1 {
     font-size: 170%;
+    color:black;
     text-align: center;
 }
 
@@ -41,8 +30,6 @@ h2 {
     font-size: 130%;
     color: navy;
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 a {
@@ -53,14 +40,18 @@ header {
     margin: 5px;
 }
 
-nav, header, .contact {
+nav, header, #contact, #email {
     text-align: center;
 }
 
 .fa {
+    display: inline-block;
     padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 120%;
     text-decoration: none;
+    width: 100px;
 }
   
 .fa:hover {
@@ -82,36 +73,43 @@ nav, header, .contact {
     color: white;
 }
 
-nav {
-	margin: 5px;
+.fa-tiktok {
+    background: #000;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
 }
 
 img {
     border: 1px dotted gray;
 }
 
-iframe {
-    margin: 10px auto 5px;
+nav {
+	margin: 5px 5px 5px 5px;
 }
 
 nav ul {
 	margin: 0px;
 	list-style-type: none;
-    padding: 5px 0px 5px 5px;
 }
 
 nav ul li {
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
 	text-align: center;
     cursor: default;
 }
 
 .products, .why-buy, .newsletter, .catalog-download, .order-info, .about, .partners {
-    margin: 10px 5px 5px 5px;
+    margin: 10px 0px 10px 0px;
     border: 1px dotted gray;
 }
 
 .products div {
+    margin: 5px;
     text-align: center;
 }
 
@@ -123,14 +121,28 @@ footer {
     clear: right;
 }
 
-h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-info, .contact, .about, .partners {
+h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-info, #contact, .about, .partners, nav ul li a {
     border-radius: 5px;
+}
+
+p {
+    padding: 10px;
+}
+
+#logo {
+    border: none;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 nav, h1, h2 {
     background-color: LightGray;
     background: radial-gradient(ellipse, #FFFFFF 0%, lightGray 100%);
-    margin: 10px 0px;
+    margin: 0px 0px;
     padding-top: 5px;
     padding-bottom: 5px;
     border: 1px dotted gray;
@@ -149,3 +161,14 @@ section#products ul li {
 section#products h2 {
 	color: navy;
 }
+
+#contact {
+    margin: 5px;
+    padding: 0px;
+}
+
+#email {
+    margin: 5px 5px 10px 5px;
+    padding: 0px;
+}
+
