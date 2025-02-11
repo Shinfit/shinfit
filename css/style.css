@@ -126,7 +126,12 @@ h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-in
 }
 
 p {
-    padding: 10px;
+    margin: 5px;
+}
+
+.about {
+    padding: 0px 0px 5px 0px;
+    text-align: center;
 }
 
 #logo {
