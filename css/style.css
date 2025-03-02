@@ -177,3 +177,15 @@ section#products h2 {
     padding: 0px;
 }
 
+/* fit images in 360px page width */
+.images img {
+    width: 360px;
+    height: auto;
+    margin: 15px 5px 0px 5px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
