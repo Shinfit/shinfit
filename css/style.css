@@ -1,5 +1,11 @@
 * {margin: 0px; padding: 0px; }
 
+ul, ol {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
 body {
     background-color: #ffffff;
     font-family: 'Poppins', Arial, Helvetica, Arial,  sans-serif;
@@ -103,9 +109,11 @@ nav ul li {
     cursor: default;
 }
 
-.products, .why-buy, .newsletter, .catalog-download, .order-info, .about, .partners {
+.products, .why-buy, .newsletter, .catalog-download, .order-info, #about, .partners {
     margin: 10px 0px 10px 0px;
     border: 1px dotted gray;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
 }
 
 .products div {
@@ -121,15 +129,29 @@ footer {
     clear: right;
 }
 
-h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-info, #contact, .about, .partners, nav ul li a {
+h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-info, #contact, #about, .partners, nav ul li a {
     border-radius: 5px;
+}
+
+#about h2 {
+    border-radius: 5px 5px 0px 0px;
+}
+
+#about h3 {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+}
+
+#about h2 + p {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
 }
 
 p {
     margin: 5px;
 }
 
-.about {
+#about {
     padding: 0px 0px 5px 0px;
     text-align: center;
 }
@@ -177,7 +199,6 @@ section#products h2 {
     padding: 0px;
 }
 
-/* fit images in 360px page width */
 .images img {
     width: 360px;
     height: auto;
@@ -188,4 +209,66 @@ section#products h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.justified {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    text-indent: 2ch;
+}
+
+#graduation {
+    border: 1px dotted gray;
+    border-radius: 5px;
+    background-color: Gray;
+    background: linear-gradient(to bottom, #808080 0%, lightGray 100%);
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#graduation li {
+    text-align: left;
+    font-weight: bold;
+}
+
+.white {color: #FFFFFF;}
+.yellow {color: #FFFF00;}
+.orange {color: #FFA500;}
+.green {color: #008000;}
+.blue {color: #0000FF;}
+.purple {color: #800080;}
+.red {color: #FF0000;}
+.brown {color: #A52A2A;}
+.gray {color: #808080;}
+.black {color: #000000;}
+
+ul {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    list-style-position: inside;
+}
+
+ol li {
+    text-align: left;
+}
+
+ul li {
+    text-align: left;
+    text-justify: none;
+}
+
+#signature {
+    font-family: 'Yu Gothic', 'Yu Mincho', 'MS Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: #000000;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
 }
