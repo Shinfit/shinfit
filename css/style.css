@@ -1,4 +1,4 @@
-* {margin: 0px; padding: 0px; }
+* {margin: 0; padding: 0; box-sizing: border-box;}
 
 ul, ol {
     margin-left: 20px;
@@ -8,207 +8,240 @@ ul, ol {
 
 body {
     background-color: #ffffff;
-    font-family: 'Poppins', Arial, Helvetica, Arial,  sans-serif;
-	font-size: small;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    width: auto;
-    margin-bottom: 10px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+    line-height: 1.6;
 }
 
 #page {
-	width: 360px;
-	margin: 0px auto;
+	width: 100%;
+    max-width: 1200px;
+	margin: 0 auto;
+    padding: 0 15px;
 }
 
 h1 {
-    font-size: 170%;
+    font-size: 2rem;
     color:black;
     text-align: center;
 }
 
 h2 {
-    font-size: 130%;
+    font-size: 1.6rem;
     color: navy;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+p {
     text-align: center;
 }
 
 a {
     margin: 5px;
+    text-decoration: none;
 }
 
 header {
-    margin: 5px;
-}
-
-nav, header, #contact, #email {
-    text-align: center;
-}
-
-.fa {
-    display: inline-block;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 120%;
-    text-decoration: none;
-    width: 100px;
-}
-  
-.fa:hover {
-    opacity: 0.7;
-}
-  
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-  
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-.fa-instagram {
-    background: #d10869;
-    color: white;
-}
-
-.fa-tiktok {
-    background: #000;
-    color: white;
-}
-
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
-
-img {
-    border: 1px dotted gray;
-}
-
-nav {
-	margin: 5px 5px 5px 5px;
-}
-
-nav ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-nav ul li {
-    padding: 5px;
-    margin: 5px;
-	text-align: center;
-    cursor: default;
-}
-
-.products, .why-buy, .newsletter, .catalog-download, .order-info, #about, .partners {
-    margin: 10px 0px 10px 0px;
-    border: 1px dotted gray;
-    padding: 0px 10px 10px 10px;
-    text-align: center;
-}
-
-.products div {
-    margin: 5px;
-    text-align: center;
-}
-
-footer {
-    font-size: 85%;
-    padding: 5px 0px;
-    text-align: center;
-	margin: 5px auto;
-    clear: right;
-}
-
-h1, h2, nav, img, .products, .why-buy, .newsletter, .catalog-download, .order-info, #contact, #about, .partners, nav ul li a {
-    border-radius: 5px;
-}
-
-#about h2 {
-    border-radius: 5px 5px 0px 0px;
-}
-
-#about h3 {
-    margin: 10px 0px 0px 0px;
-    padding: 0px;
-}
-
-#about h2 + p {
-    margin: 10px 0px 0px 0px;
-    padding: 0px;
-}
-
-p {
-    margin: 5px;
-}
-
-#about {
-    padding: 0px 0px 5px 0px;
+    margin: 10px 0;
     text-align: center;
 }
 
 #logo {
     border: none;
     border-radius: 50%;
-    margin: 10px auto;
+    margin: 20px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    width: 250px;
+    max-width: 40%;
 }
 
-nav, h1, h2 {
-    background-color: LightGray;
+nav {
+    margin: 10px 0;
     background: radial-gradient(ellipse, #FFFFFF 0%, lightGray 100%);
-    margin: 0px 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px dotted gray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
 }
 
-section#products ul {
-	margin: 0px;
+nav ul {
 	list-style-type: none;
-	padding: 5px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section#products ul li {
-	margin: 5px;
+nav ul li {
+    padding: 5px 0;
+    margin: 5px 0;
+    text-align: center;
 }
 
-section#products h2 {
-	color: navy;
+nav ul li a {
+    width: 160px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    display: block;
+    font-size: 1rem;
 }
 
-#contact {
-    margin: 5px;
-    padding: 0px;
+#instagram {
+    padding: 10px 95px 10px 50px;
 }
 
-#email {
-    margin: 5px 5px 10px 5px;
-    padding: 0px;
+#tiktok {
+    padding: 10px 95px 10px 60px;
 }
 
-.images img {
-    width: 360px;
+#youtube {
+    padding: 10px 95px 10px 70px;
+}
+
+#levels {
     height: auto;
-    margin: 15px 5px 0px 5px;
+    
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram {background: #d10869; color: white;}
+.fa-tiktok {background: #000; color: white;}
+.fa-youtube {background: #bb0000; color: white;}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .images {
+    display: block;
+    margin-top: 20px;
+}
+
+.images .image img,
+.images .map-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.map-container {
+    margin: 10px 0;
+}
+
+#about {
+    margin: 20px 0;
+    padding: 20px 50px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+#about ol {
+    list-style-position: inside;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding-left: 0;
+}
+
+#about ol li {
+    text-align: center;
+    margin: 6px 0;
+}
+
+#about ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 10px 0 10px 20px;
+    padding-left: 0;
+    text-align: left;
+}
+
+#about ul li {
+    margin: 6px 0;
+}
+
+.justified {
+    text-align: justify;
+    margin: 10px 0;
+    text-indent: 2ch;
+}
+
+#signature {
+    font-family: 'Yu Gothic', 'Yu Mincho', 'MS Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+    margin: 15px 0;
+}
+
+footer {
+    font-size: 0.9rem;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.maxwidth {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#slogan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+#contact {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-flex {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.map-container {
+    flex: 1 1 60%;
+    min-width: 300px;
+}
+
+.contact-info {
+    flex: 1 1 40%;
+    min-width: 250px;
+    margin: 80px 0;
+}
+
+.contact-info ul {
+    list-style-position: outside;  /* keeps bullet outside */
+    padding-left: 1.2em; /* adjust bullet spacing */
+}
+
+.contact-info ul li {
+    text-indent: -1.2em; /* pull first line left */
+    padding-left: 1.2em; /* align wrapped text */
 }
 
 .justified {
@@ -233,7 +266,7 @@ section#products h2 {
 }
 
 #graduation li {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -242,33 +275,64 @@ section#products h2 {
 .orange {color: #FFA500;}
 .green {color: #008000;}
 .blue {color: #0000FF;}
-.purple {color: #800080;}
+.purple {color: #800080; padding: 5px 0 0 0;}
 .red {color: #FF0000;}
 .brown {color: #A52A2A;}
 .gray {color: #808080;}
 .black {color: #000000;}
 
-ul {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    list-style-position: inside;
-}
-
-ol li {
-    text-align: left;
-}
-
-ul li {
-    text-align: left;
-    text-justify: none;
-}
-
-#signature {
-    font-family: 'Yu Gothic', 'Yu Mincho', 'MS Gothic', sans-serif;
-    font-weight: bold;
-    font-size: 120%;
-    color: #000000;
+.columns {
+    column-gap: 32px;
+    column-rule: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 0 10px;
     text-align: center;
-    margin: 5px 0px 5px 0px;
+}
+
+.columns3 {
+    column-count: 3;
+}
+
+.columns2 {
+    column-count: 2;
+}
+
+.graduation-group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: block;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+        text-align: right;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
 }
