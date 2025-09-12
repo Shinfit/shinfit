@@ -386,36 +386,48 @@ footer {
         /* Hide the menu toggle button */
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        display: flex;
-        /* Always show the menu */
-        width: 100%;
-        padding: 0;
+    nav {
+        margin: 0;
+        padding: 5px 0 5px 0;
     }
-
     nav ul.active {
         display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Ensures children are centered */
+        display: flex;
+        width: 100%;
+        padding: 0;
     }
 
     nav ul li {
         width: 100%;
         margin: 0;
         padding: 0;
+        text-align: center;
     }
 
     nav ul li a {
-        width: 100%;
-        display: block;
+        width: 90%;
+        padding: 10px;
         text-align: center;
-        padding: 12px 0;
+        border-radius: 5px;
+        display: block;
         font-size: 1rem;
-        border-radius: 0;
-        border-bottom: 1px solid #eee;
-        background: #f9f9f9;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
+    .maxwidth {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
     .columns3,
     .columns2 {
         column-count: 1;
@@ -433,26 +445,20 @@ footer {
     #instagram,
     #tiktok,
     #youtube {
-        padding: 10px 0;
-    }
-
-    nav ul li a {
-        width: 120px;
-        padding: 10px;
-        text-align: center;
-        display: inline-block;
-        border-radius: 5px;
-        display: block;
-        font-size: 1rem;
-        margin: 5px auto;
+        padding: 10px 40px 10px 0px;
     }
 
     .contact-flex {
         flex-direction: column;
+        align-items: center;
     }
 
     .map-container {
         order: 1;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .contact-info {
