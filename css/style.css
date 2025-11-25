@@ -283,7 +283,7 @@ footer {
 #interclubs {
     display: block;       /* ensures it’s a block element */
     width: 100%;          /* fills its container */
-    max-width: 600px;     /* optional, keep it constrained */
+    max-width: 500px;     /* optional, keep it constrained */
     margin: 20px auto;    /* centers it */
     border: 1px solid #ccc;
     border-radius: 5px;
