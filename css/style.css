@@ -1,30 +1,32 @@
+/* ========== GLOBAL RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul,
-ol {
+ul, ol {
     margin-left: 20px;
     padding-left: 20px;
     list-style-position: inside;
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #fff;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-#page {
-    width: 100%;
+/* ========== LAYOUT ========== */
+#page, .maxwidth {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    text-align: center;
 }
 
+/* ========== HEADINGS & TEXT ========== */
 h1 {
     font-size: 2rem;
     color: black;
@@ -52,6 +54,14 @@ a {
     text-decoration: none;
 }
 
+#slogan {
+    font-style: italic;
+    margin: 10px 0 20px 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ========== HEADER & LOGO ========== */
 header {
     margin: 10px 0;
     text-align: center;
@@ -66,12 +76,13 @@ header {
     max-width: 40%;
 }
 
+/* ========== NAVIGATION ========== */
 nav {
     margin: 10px 0;
-    background: radial-gradient(ellipse, #FFFFFF 0%, lightGray 100%);
+    padding: 0;
+    background: radial-gradient(ellipse, #fff 0%, lightgray 100%);
     border: 1px solid #ccc;
     border-radius: 5px;
-    position: relative;
 }
 
 nav ul {
@@ -79,101 +90,73 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
 }
 
 nav ul li {
     padding: 5px 0;
     margin: 5px 0;
     text-align: center;
+    width: 100%;
 }
 
 nav ul li a {
     width: 160px;
     padding: 10px;
-    text-align: center;
-    display: inline-block;
     border-radius: 5px;
     display: block;
     font-size: 1rem;
+    margin: 5px auto;
 }
 
-#instagram {
+/* Social icons base */
+#instagram, #tiktok, #youtube {
     padding: 10px 95px 10px 50px;
 }
 
-#tiktok {
-    padding: 10px 95px 10px 60px;
-}
+#tiktok { padding-left: 60px; }
+#youtube { padding-left: 70px; }
 
-#youtube {
-    padding: 10px 95px 10px 70px;
-}
+/* FontAwesome colors */
+.fa:hover { opacity: 0.7; }
+.fa-instagram { background: #d10869; color: white; }
+.fa-tiktok { background: #000; color: white; }
+.fa-youtube { background: #bb0000; color: white; }
 
-#levels {
-    height: auto;
-
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-instagram {
-    background: #d10869;
-    color: white;
-}
-
-.fa-tiktok {
-    background: #000;
-    color: white;
-}
-
-.fa-youtube {
-    background: #bb0000;
-    color: white;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    padding: 10px;
-    cursor: pointer;
-}
-
+/* ========== IMAGES & MAPS ========== */
 .images {
     display: block;
     margin-top: 20px;
 }
 
 .images .image img,
-.images .map-container {
+.map-container {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    text-align: center;
 }
 
 .map-container {
     margin: 10px 0;
 }
 
+/* ========== ABOUT SECTION ========== */
 #about {
     margin: 20px 0;
     padding: 20px 50px;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     border-radius: 5px;
     background: #f9f9f9;
 }
 
 #about ol {
     list-style-position: inside;
-    text-align: center;
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     padding-left: 0;
+    text-align: center;
 }
 
 #about ol li {
-    text-align: center;
     margin: 6px 0;
 }
 
@@ -189,21 +172,26 @@ nav ul li a {
     margin: 6px 0;
 }
 
+/* ========== JUSTIFIED TEXT ========== */
 .justified {
     text-align: justify;
-    margin: 10px 0;
+    text-justify: inter-word;
+    margin: 5px 0;
+    padding: 0 10px;
     text-indent: 2ch;
 }
 
+/* ========== SIGNATURE ========== */
 #signature {
     font-family: 'Yu Gothic', 'Yu Mincho', 'MS Gothic', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
-    color: #000000;
+    color: #000;
     text-align: center;
     margin: 15px 0;
 }
 
+/* ========== FOOTER ========== */
 footer {
     font-size: 0.9rem;
     padding: 15px 0;
@@ -212,20 +200,7 @@ footer {
     margin-top: 20px;
 }
 
-.maxwidth {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-#slogan {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin: 20px 0;
-}
-
+/* ========== CONTACT SECTION ========== */
 #contact {
     display: flex;
     flex-direction: column;
@@ -239,50 +214,30 @@ footer {
     margin: 0 auto;
 }
 
-.map-container {
-    flex: 1 1 60%;
-    min-width: 300px;
-}
-
-.contact-info {
-    flex: 1 1 40%;
-    min-width: 250px;
-    margin: 10px 0;
-}
+.map-container { flex: 1 1 60%; min-width: 300px; }
+.contact-info { flex: 1 1 40%; min-width: 250px; margin: 10px 0; }
 
 .contact-info ul {
     list-style-position: outside;
-    /* keeps bullet outside */
     padding-left: 1.2em;
-    /* adjust bullet spacing */
 }
 
 .contact-info ul li {
     text-indent: -1.2em;
-    /* pull first line left */
     padding-left: 1.2em;
-    /* align wrapped text */
 }
 
-.justified {
-    text-align: justify;
-    text-justify: inter-word;
-    margin: 5px 0px 5px 0px;
-    padding: 0px 10px 0px 10px;
-    text-indent: 2ch;
-}
-
+/* ========== GRADUATION SECTION ========== */
 #graduation {
     border: 1px dotted gray;
     border-radius: 5px;
-    background-color: Gray;
-    background: linear-gradient(to bottom, #808080 0%, lightGray 100%);
-    margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
+    background: linear-gradient(to bottom, #808080 0%, lightgray 100%);
+    margin: 10px;
+    padding: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #graduation li {
@@ -290,47 +245,23 @@ footer {
     font-weight: bold;
 }
 
-.white {
-    color: #FFFFFF;
+#graduation_text {
+    padding: 30px 5px;
 }
 
-.yellow {
-    color: #FFFF00;
-}
+/* Text color utilities */
+.white { color: #fff; }
+.yellow { color: #ff0; }
+.orange { color: #ffa500; }
+.green { color: #008000; }
+.blue { color: #00f; }
+.purple { color: #800080; padding-top: 5px; }
+.red { color: #f00; }
+.brown { color: #a52a2a; }
+.gray { color: #808080; }
+.black { color: #000; }
 
-.orange {
-    color: #FFA500;
-}
-
-.green {
-    color: #008000;
-}
-
-.blue {
-    color: #0000FF;
-}
-
-.purple {
-    color: #800080;
-    padding: 5px 0 0 0;
-}
-
-.red {
-    color: #FF0000;
-}
-
-.brown {
-    color: #A52A2A;
-}
-
-.gray {
-    color: #808080;
-}
-
-.black {
-    color: #000000;
-}
-
+/* Columns */
 .columns {
     column-gap: 32px;
     column-rule: 1px solid #ccc;
@@ -339,13 +270,8 @@ footer {
     text-align: center;
 }
 
-.columns3 {
-    column-count: 3;
-}
-
-.columns2 {
-    column-count: 2;
-}
+.columns3 { column-count: 3; }
+.columns2 { column-count: 2; }
 
 .graduation-group {
     break-inside: avoid;
@@ -353,12 +279,28 @@ footer {
     display: block;
 }
 
-#graduation_text {
-    padding: 30px 5px;
+/* ========== INTERCLUBS IMAGE ========== */
+#interclubs {
+    display: block;       /* ensures it’s a block element */
+    width: 100%;          /* fills its container */
+    max-width: 600px;     /* optional, keep it constrained */
+    margin: 20px auto;    /* centers it */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;     /* clips image corners to match border-radius */
+    margin: 0 auto;    /* centers the image */
+    padding: 0;
+}
+
+#interclubs img {
+    width: 100%;          /* image fills container */
+    height: auto;         /* keeps aspect ratio */
+    display: block;
 }
 
 
-/* ===== RESPONSIVE DESIGN ===== */
+
+/* ========== RESPONSIVE DESIGN ========== */
 
 @media (min-width: 768px) {
     nav ul {
@@ -369,83 +311,32 @@ footer {
     nav ul li {
         margin: 0 10px;
     }
-
-    .menu-toggle {
-        display: none !important;
-    }
 }
 
 @media (max-width: 767px) {
+    body { font-size: 0.9rem; }
 
-    body {
-        font-size: 0.9rem;
-    }
+    nav { margin: 0; padding: 5px 0; }
 
-    .menu-toggle {
-        display: none;
-        /* Hide the menu toggle button */
-    }
+    nav ul { flex-direction: column; width: 100%; }
+    nav ul li { width: 100%; margin: 0; padding: 0; }
+    nav ul li a { width: 90%; }
 
-    nav {
-        margin: 0;
-        padding: 5px 0 5px 0;
-    }
-    nav ul.active {
-        display: flex;
-    }
+    .maxwidth { max-width: 760px; }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center; /* Ensures children are centered */
-        display: flex;
-        width: 100%;
-        padding: 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav ul li a {
-        width: 90%;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-        display: block;
-        font-size: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    .maxwidth {
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
     .columns3,
-    .columns2 {
-        column-count: 1;
-    }
+    .columns2 { column-count: 1; }
 
-    #about {
-        padding: 15px 10px;
-    }
+    #about { padding: 15px 10px; }
 
     #graduation_text {
         text-indent: 0;
         padding: 0 5px;
     }
 
-    #instagram,
-    #tiktok,
-    #youtube {
-        padding: 10px 40px 10px 0px;
+    /* Social icons mobile */
+    #instagram, #tiktok, #youtube {
+        padding: 10px 40px 10px 0;
     }
 
     .contact-flex {
@@ -455,14 +346,8 @@ footer {
 
     .map-container {
         order: 1;
-        width: 100%;
         max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
-    .contact-info {
-        order: 2;
-    }
-
+    .contact-info { order: 2; }
 }
