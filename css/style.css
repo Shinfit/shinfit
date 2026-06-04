@@ -353,7 +353,7 @@ footer {
 
     .map-container {
         order: 1;
-        max-width: 400px;
+        max-width: 390px;
     }
 
     .contact-info { order: 2; }
