@@ -204,6 +204,7 @@ footer {
 #contact {
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
 }
 
 .contact-flex {
