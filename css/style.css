@@ -132,10 +132,12 @@ nav ul li a {
 .images .image img,
 .map-container {
     width: 100%;
+    margin: 20px 10px 0px 0px;
+}
+
+.map-container iframe {
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 5px 0 0 0;
+    border-radius: 10px;
 }
 
 /* ========== ABOUT SECTION ========== */
