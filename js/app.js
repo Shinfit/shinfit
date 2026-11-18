@@ -76,16 +76,28 @@ sticker.addEventListener('keydown', (event) => {
 
 const floatingCta = document.querySelector('.floating-cta');
 const trialSection = document.querySelector('#prueba');
-const trialObserver = new IntersectionObserver(([entry]) => {
-  floatingCta.classList.toggle('is-hidden', entry.isIntersecting);
-}, { threshold: 0.15 });
+const ctaVisibility = new Map();
+const trialObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => ctaVisibility.set(entry.target, entry.isIntersecting));
+  const hide = [...ctaVisibility.values()].some(Boolean);
+  floatingCta.classList.toggle('is-hidden', hide);
+  floatingCta.inert = hide;
+}, { threshold: 0.05 });
 trialObserver.observe(trialSection);
+trialObserver.observe(document.querySelector('.hero'));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+    closeMenu();
+    menuButton.focus();
+  }
+});
 
 document.querySelector('#trial-form').addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
   const message = [
-    'Hola Sergio, quiero reservar una clase de prueba de Karate Kyokushin en SHINFIT.',
+    'Hola Sergio, quiero probar una clase gratis de Karate Kyokushin en SHINFIT y saber cómo apuntarme a la promoción hasta el 31 de diciembre de 2026: 40 € durante todo 2027 (mensualidad o bono de 10 clases).',
     '',
     `Nombre: ${data.get('name')}`,
     `Teléfono: ${data.get('phone')}`,
